@@ -1,0 +1,163 @@
+﻿@model FrogProject.feedbacksession1
+
+@{
+    ViewBag.Title = "Feedback";
+}
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script src="~/Scripts/jquery-3.3.1.js"></script>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <title>Neuron Template - Contact</title>
+        <!--
+
+        Template 2085 Neuron
+
+        http://www.tooplate.com/view/2085-neuron
+
+        -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+        <style>
+            .update{
+                height:34px;
+                    margin-top:20px !important;
+                    margin-bottom:10px !important;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- Home Section -->
+
+        <section id="home" class="main-home parallax-section" style="background-image:url(../../images/pic02.jpg)">
+            <div class="overlay"></div>
+            <div id="particles-js"></div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+
+                        <h1>Feedback Session</h1>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="form-horizontal">
+
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        @Html.ValidationMessage("Error", new { @class = "text-danger" })
+
+                        @Html.ValidationMessage("Success", new { @class = "text-danger" })
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                                                                                                                                            
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Feedback, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Feedback, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Feedback, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div >
+                            <div class="col-md-offset-2 col-md-10">
+                                <input id="submitButton" type="submit" value="Create"/>
+                            </div>
+                        </div>
+
+
+
+                                    <div align="center">
+                                        <hr /><hr /><hr /><hr />
+                                        <h3>We are waiting your feedback.</h3>
+                                        <img src="~/images/Feedback-Page.jpg" width="1000">
+                        </div>
+
+                                    </div>
+
+                </div >
+            </div >
+        </section >
+
+
+                                    <footer>
+                                        <div class="container">
+                                            <div class="row">
+
+                                                <div class="col-md-5 col-md-offset-1 col-sm-6">
+                                                    <h3>FrogTicketing</h3>
+                                                    <p>The Best and trustest online event ticket selling in Myanmar.</p>
+                                                    <div class="footer-copyright">
+                                                        <p>Copyright &copy; 2019 FrogTicketing - Design: Tooplate</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 col-md-offset-1 col-sm-6">
+                                                    <h3>Talk to us</h3>
+                                                    <p><i class="fa fa-globe"></i> 428(A),Ground Floor, Zaya 15th Street, 10th Quarter, South Okkalapa Tsp, Yangon</p>
+
+                                                    <p><i class="fa fa-phone"></i> +959 956 608 416</p>
+                                                    <p><i class="fa fa-save"></i> info@frogticketing.com</p>
+                                                </div>
+
+                                                <div class="clearfix col-md-12 col-sm-12">
+                                                    <hr>
+                    </div>
+
+
+
+                                                </div>
+                                            </div>
+        </footer>
+
+
+
+                                      
+
+    </body>
+</html>
+
+
+        }
+

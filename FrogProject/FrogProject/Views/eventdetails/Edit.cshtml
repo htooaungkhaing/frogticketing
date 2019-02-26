@@ -1,0 +1,239 @@
+﻿@model FrogProject.eventdetail
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Neuron Template - Contact</title>
+    <!--
+
+    Template 2085 Neuron
+
+    http://www.tooplate.com/view/2085-neuron
+
+    -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
+
+    <style>
+        .update {
+            height: 34px;
+            margin-top: 20px !important;
+            margin-bottom: 10px !important;
+        }
+        </style>
+</head>
+<body>
+
+    <!-- Home Section -->
+
+    <section id="home" class="main-home parallax-section" style="background-image:url(../../images/pic02.jpg)">
+        <div class="overlay"></div>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+
+                    <h1>Edit Event</h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
+
+                    <table class="table">
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-horizontal">
+
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.EventID, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.EventID, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.EventID, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                @Html.HiddenFor(model => model.EventName)
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Venue, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Venue, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Venue, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Lng, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Lng, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Lng, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Lat, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Lat, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Lat, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Time, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.GateOpen, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.GateOpen, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.GateOpen, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.PublicSale, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.PublicSale, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.PublicSale, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.valiabeTicet, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.valiabeTicet, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.valiabeTicet, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2 update" })
+                                    <div class="col-md-10">
+                                        @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" value="Save" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div>
+                            @Html.ActionLink("Back to List", "deleteevent")
+                        </div>
+
+                        @section Scripts {
+                            @Scripts.Render("~/bundles/jqueryval")
+                        }
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-5 col-md-offset-1 col-sm-6">
+                    <h3>FrogTicketing</h3>
+                    <p>The Best and trustest online event ticket selling in Myanmar.</p>
+                    <div class="footer-copyright">
+                        <p>Copyright &copy; 2019 FrogTicketing - Design: Tooplate</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-1 col-sm-6">
+                    <h3>Talk to us</h3>
+                    <p><i class="fa fa-globe"></i> 428(A),Ground Floor, Zaya 15th Street, 10th Quarter, South Okkalapa Tsp, Yangon</p>
+
+                    <p><i class="fa fa-phone"></i> +959 956 608 416</p>
+                    <p><i class="fa fa-save"></i> info@frogticketing.com</p>
+                </div>
+
+                <div class="clearfix col-md-12 col-sm-12">
+                    <hr>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+
+

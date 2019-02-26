@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd6b92f8d49349f78489a0fd0e0deeb8" Name="Diagram1">
+        <EntityTypeShape EntityType="frogprojectModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.AspNetRole" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.AspNetUser" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.eventdetail" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="frogprojectModel.orderdetail" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="frogprojectModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="frogprojectModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="frogprojectModel.FK_orderdetail_UserID" ManuallyRouted="false" />
+        <AssociationConnector Association="frogprojectModel.FK_orderdetail_EventName" ManuallyRouted="false" />
+        <AssociationConnector Association="frogprojectModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="frogprojectModel.feedbacksession1" Width="2.375" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="frogprojectModel.FK_feedbacksession_UserID1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,132 @@
+﻿@model FrogProject.Models.IndexViewModel
+@{
+    ViewBag.Title = "Account";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Neuron Template - Contact</title>
+    <!--
+
+    Template 2085 Neuron
+
+    http://www.tooplate.com/view/2085-neuron
+
+    -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Home Section -->
+
+    <section id="home" class="main-home parallax-section" style="background-image:url(../../images/pic02.jpg)">
+        <div class="overlay"></div>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+
+                    <h1>Your Account Setting</h1>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-1 col-md-10 col-sm-12">
+
+                    <p class="text-success">@ViewBag.StatusMessage</p>
+                    <div>
+                        <h4>Change your account settings</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>Password:</dt>
+                            <dd>
+                                [
+                                @if (Model.HasPassword)
+            {
+                                    @Html.ActionLink("Change your password", "ChangePassword")
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Create", "SetPassword")
+                                }
+                                ]
+                            </dd>
+
+
+
+
+                        </dl>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-5 col-md-offset-1 col-sm-6">
+                    <h3>FrogTicketing</h3>
+                    <p>The Best and trustest online event ticket selling in Myanmar.</p>
+                    <div class="footer-copyright">
+                        <p>Copyright &copy; 2019 FrogTicketing - Design: Tooplate</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-md-offset-1 col-sm-6">
+                    <h3>Talk to us</h3>
+                    <p><i class="fa fa-globe"></i> 428(A),Ground Floor, Zaya 15th Street, 10th Quarter, South Okkalapa Tsp, Yangon</p>
+
+                    <p><i class="fa fa-phone"></i> +959 956 608 416</p>
+                    <p><i class="fa fa-save"></i> info@frogticketing.com</p>
+                </div>
+
+                <div class="clearfix col-md-12 col-sm-12">
+                    <hr>
+                </div>
+
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
